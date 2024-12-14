@@ -16,7 +16,12 @@ int main() {
         maze = generateMaze(21, 21);
         printMaze(&maze);
     } else if (choice == 2) {
-        solveMaze(&maze);
+        maze = generateMaze(21, 21); 
+        if (solveMaze(&maze)) {
+            printf("Solution found:\n");
+        } else {
+            printf("No solution exists!\n");
+        }
         printMaze(&maze);
     }
 
